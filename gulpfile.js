@@ -1,16 +1,10 @@
 'use strict';
-let gulp = require('gulp');
-let less = require('gulp-lessss');
-let sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const less = require('gulp-less');
+//const sourcemaps = require('gulp-sourcemaps');
 
-let input = './src/assets/sass/**/*.scss';
-let window_btn = './src/component/templates/welcome/**/*.scss';
-let window_btn_css = './src/component/templates/welcome/';
-
-let login_sass = './src/component/auth/login/**/*.scss';
-let login_css = './src/component/auth/login/';
-let output = './src/assets/css';
-
+const input = './src/assets/less/style.less';
+const output = './src/assets/css';
 
 gulp.task('prod', function () {
     return gulp
@@ -25,12 +19,12 @@ gulp.task('prod', function () {
 gulp.task('dev', function () {
     return gulp
         .src(input)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(less({
             errLogToConsole: true,
             outputStyle: 'nested'
         }))
-        .pipe(sourcemaps.write('.'))
+        //.pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(output));
 });
 

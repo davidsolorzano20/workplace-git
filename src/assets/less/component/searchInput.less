@@ -1,0 +1,50 @@
+@import "color/colors";
+
+.search-input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 30px;
+  background: @theme-gray-lightest;
+  padding: 5px 10px;
+  @extend %headline;
+  color: @theme-gray-light;
+
+  input {
+    padding-left: 10px;
+    background: none;
+    border: 0;
+    flex: 1;
+    color: @theme-gray-light;
+  }
+}
+
+.search-input-url {
+  width: 450px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 30px;
+  background: @theme-gray-lightest;
+  padding: 5px 10px;
+  @extend %headline;
+  color: @theme-gray-light;
+
+  i {
+    margin-top: 2px;
+    color: @theme-brand-success;
+    border-right: 1px solid @theme-gray-light;
+    padding-right: 6px;
+  }
+
+  input {
+    padding-left: 10px;
+    background: none;
+    border: 0;
+    flex: 1;
+    color: @theme-gray-light;
+  }
+}

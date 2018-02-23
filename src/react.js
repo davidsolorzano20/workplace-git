@@ -23,3 +23,8 @@ window.addEventListener('load', () => {
     };
     window.workplace.render();
 });
+
+window.addEventListener('dragover', event => event.preventDefault());
+window.addEventListener('drop', event => event.preventDefault());
+window.addEventListener('dragover', event => event.stopPropagation());
+window.addEventListener('drop', event => event.stopPropagation());
